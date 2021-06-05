@@ -1,21 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
+/* import { StatusBar } from 'expo-status-bar'; */
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Image, View, KeyboardAvoidingView, TextInput, TouchableOpacity, Text } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <KeyboardAvoidingView>
+      <View>
+         <Image
+        source={require('./assets/logo.png')}
+        /> 
+        </View>
+        
+
+        <View>
+          <TextInput
+            placeholder = "Email"          // mascara para email 
+            autoCorrect = {false}          // Para corretor não funcionar
+            onChangeText = {() =>{}} // Não vai persistir dados em nenhum local
+          />
+
+          <TextInput
+              placeholder = "Senha"          // mascara para email 
+              autoCorrect = {false}          // Para corretor não funcionar
+              onChangeText = {() =>{}} // Não vai persistir dados em nenhum local
+          />
+
+          <TouchableOpacity>
+            <Text>Acessar</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <Text>Criar conta gratuita</Text>
+          </TouchableOpacity>
+
+        </View>
+    </KeyboardAvoidingView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
