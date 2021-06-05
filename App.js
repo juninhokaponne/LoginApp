@@ -24,12 +24,12 @@ export default function App() {
               onChangeText = {() =>{}} // Não vai persistir dados em nenhum local
           />
 
-          <TouchableOpacity>
-            <Text>Acessar</Text>
+          <TouchableOpacity style={styles.btnSubmit}>
+            <Text style={styles.submitText}>Acessar</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity>
-            <Text>Criar conta </Text>
+          <TouchableOpacity  style={styles.btnRegister}>
+            <Text style={styles.registerText}>Criar conta </Text>
           </TouchableOpacity>
 
         </View>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create ({
       flex:1,
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#191919'
+      backgroundColor: '#9400D3'
     },
     containerLogo: {
       flex:1,
@@ -53,13 +53,34 @@ const styles = StyleSheet.create ({
       alignItems: 'center',
       justifyContent: 'center',
       width: '90%',
+      paddingBottom: 10
     },
     input:{
       backgroundColor: '#FFF',
       width: '90%',
+      height: '15%',
       marginBottom:15,
       color: '#221',
       fontSize: 17,
-      borderRadius:7
+      borderRadius:7,
+      padding:10,
+    },
+    btnSubmit: {
+      backgroundColor:'#3CB371',//
+      width:'90%',
+      height: 45,
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 7
+    },
+    submitText: {
+      color:'#FFF',
+      fontSize:18,
+    },
+    btnRegister:{
+      marginTop:10,
+    },
+    registerText:{
+      color:'#FFF',
     }
 });
