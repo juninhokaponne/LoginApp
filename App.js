@@ -11,12 +11,14 @@ export default function App() {
 
         <View style={styles.container}>
           <TextInput
+            style={styles.input}
             placeholder = "Email"          // mascara para email 
             autoCorrect = {false}          // Para corretor não funcionar
             onChangeText = {() =>{}} // Não vai persistir dados em nenhum local
           />
 
           <TextInput
+              style={styles.input}
               placeholder = "Senha"          // mascara para email 
               autoCorrect = {false}          // Para corretor não funcionar
               onChangeText = {() =>{}} // Não vai persistir dados em nenhum local
@@ -51,5 +53,13 @@ const styles = StyleSheet.create ({
       alignItems: 'center',
       justifyContent: 'center',
       width: '90%',
+    },
+    input:{
+      backgroundColor: '#FFF',
+      width: '90%',
+      marginBottom:15,
+      color: '#221',
+      fontSize: 17,
+      borderRadius:7
     }
 });
