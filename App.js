@@ -5,11 +5,11 @@ import {Image, View, KeyboardAvoidingView, TextInput, TouchableOpacity, Text, St
 export default function App() {
   return (
     <KeyboardAvoidingView style ={styles.background}>
-      <View>
+      <View style = {styles.containerLogo}>
          <Image  source={require('./assets/logo.png')} /> 
         </View>
 
-        <View>
+        <View style={styles.container}>
           <TextInput
             placeholder = "Email"          // mascara para email 
             autoCorrect = {false}          // Para corretor não funcionar
@@ -38,8 +38,18 @@ export default function App() {
 const styles = StyleSheet.create ({
     background: {
       flex:1,
-      alignContent: 'center',
+      alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: '#191919'
+    },
+    containerLogo: {
+      flex:1,
+      justifyContent: 'center',
+    },
+    container: {
+      flex:1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '90%',
     }
-})
+});
