@@ -1,16 +1,13 @@
 /* import { StatusBar } from 'expo-status-bar'; */
 import React from 'react';
-import {Image, View, KeyboardAvoidingView, TextInput, TouchableOpacity, Text } from 'react-native';
+import {Image, View, KeyboardAvoidingView, TextInput, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 export default function App() {
   return (
-    <KeyboardAvoidingView>
+    <KeyboardAvoidingView style ={styles.background}>
       <View>
-         <Image
-        source={require('./assets/logo.png')}
-        /> 
+         <Image  source={require('./assets/logo.png')} /> 
         </View>
-        
 
         <View>
           <TextInput
@@ -30,10 +27,19 @@ export default function App() {
           </TouchableOpacity>
 
           <TouchableOpacity>
-            <Text>Criar conta gratuita</Text>
+            <Text>Criar conta </Text>
           </TouchableOpacity>
 
         </View>
     </KeyboardAvoidingView>
   );
 }
+
+const styles = StyleSheet.create ({
+    background: {
+      flex:1,
+      alignContent: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#191919'
+    }
+})
