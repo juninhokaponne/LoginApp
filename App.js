@@ -9,6 +9,7 @@ export default function App() {
          <Image  source={require('./assets/logo.png')} /> 
         </View>
 
+
         <View style={styles.container}>
           <TextInput
             style={styles.input}
@@ -19,9 +20,11 @@ export default function App() {
 
           <TextInput
               style={styles.input}
+              autoCapitalize="none"
               placeholder = "Senha"          // mascara para email 
               autoCorrect = {false}          // Para corretor não funcionar
               onChangeText = {() =>{}} // Não vai persistir dados em nenhum local
+              secureTextEntry={true}
           />
 
           <TouchableOpacity style={styles.btnSubmit}>
@@ -66,7 +69,7 @@ const styles = StyleSheet.create ({
       padding:10,
     },
     btnSubmit: {
-      backgroundColor:'#3CB371',//
+      backgroundColor:'#3CB371',
       width:'90%',
       height: 45,
       alignItems: 'center',
@@ -82,5 +85,14 @@ const styles = StyleSheet.create ({
     },
     registerText:{
       color:'#FFF',
-    }
+    },
+   /*  forma: {
+      flex:1,
+      height:55,
+      width:'90%',
+      backgroundColor: '#9932CC',
+      borderRadius:90,
+      marginLeft:300,
+      marginTop:20,
+    } */
 });
