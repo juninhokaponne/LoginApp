@@ -98,13 +98,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'roboto',
   },
-  /*  forma: {
-     flex:1,
-     height:55,
-     width:'90%',
-     backgroundColor: '#9932CC',
-     borderRadius:90,
-     marginLeft:300,
-     marginTop:20,
-   } */
 });
